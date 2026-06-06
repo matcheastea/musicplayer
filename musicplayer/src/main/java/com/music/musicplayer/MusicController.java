@@ -70,7 +70,6 @@ public class MusicController {
         }
     }
 
-    // ⚠️ SANGAT PENTING: Harus ada anotasi @FXML dan access modifier public / protected
     @FXML
     protected void onAddSongClick() {
         FileChooser fileChooser = new FileChooser();
@@ -123,8 +122,32 @@ public class MusicController {
         }
     }
 
+    @FXML
+protected void onNextClick() {
+    int currentIndex = songTable.getSelectionModel().getSelectedIndex();
+    
+    if (currentIndex >= 0 && currentIndex < songList.size() - 1) {
+        songTable.getSelectionModel().select(currentIndex + 1);
+        onPlayClick(); // Otomatis putar lagu berikutnya
+    } else if (currentIndex == songList.size() - 1) {
+        songTable.getSelectionModel().selectFirst();
+        onPlayClick();
+    }
+}
+
+@FXML
+protected void onPrevClick() {
+    int currentIndex = songTable.getSelectionModel().getSelectedIndex();
+    
+    if (currentIndex > 0) {
+        songTable.getSelectionModel().select(currentIndex - 1);
+        onPlayClick(); 
+    } else if (currentIndex == 0) {
+        songTable.getSelectionModel().selectLast();
+        onPlayClick();
+    }
+}
+
     @FXML protected void onPauseClick() { if (mediaPlayer != null) mediaPlayer.pause(); }
     @FXML protected void onStopClick() { if (mediaPlayer != null) mediaPlayer.stop(); }
-    @FXML protected void onPrevClick() {}
-    @FXML protected void onNextClick() {}
 }
