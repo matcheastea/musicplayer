@@ -17,7 +17,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-// PASTIKAN: Nama kelasnya adalah MusicController
 public class MusicController {
 
     @FXML private TableView<Song> songTable;

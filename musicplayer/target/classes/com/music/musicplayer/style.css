@@ -1,0 +1,98 @@
+.root {
+    -fx-background-color: #121212; 
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.label {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+#lblNowPlaying {
+    -fx-text-fill: #1DB954; 
+    -fx-padding: 10px 0px;
+}
+
+.table-view {
+    -fx-background-color: #181818;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-color: #282828;
+    -fx-border-width: 1px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #282828;
+    -fx-background-radius: 8px 8px 0px 0px;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #B3B3B3;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-text-background-color: #FFFFFF;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #1a1a1a;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #2a2a2a;
+    -fx-cursor: hand;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #1DB954;
+}
+
+.table-row-cell:selected .label {
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+}
+
+.table-view .placeholder .label {
+    -fx-text-fill: #B3B3B3;
+}
+
+.button {
+    -fx-background-color: #282828;
+    -fx-text-fill: #FFFFFF;
+    -fx-background-radius: 20px; /* Membuat tombol bulat elips */
+    -fx-padding: 8px 16px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-transition: 0.2s;
+}
+
+.button:hover {
+    -fx-background-color: #3e3e3e;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.button:pressed {
+    -fx-background-color: #121212;
+}
+
+#btnPlay {
+    -fx-background-color: #1DB954;
+    -fx-text-fill: #000000;
+}
+#btnPlay:hover {
+    -fx-background-color: #1ed760;
+}
+
+#btnAdd {
+    -fx-background-color: #3b5998;
+    -fx-text-fill: #FFFFFF;
+}
+#btnAdd:hover {
+    -fx-background-color: #4c70ba;
+}
